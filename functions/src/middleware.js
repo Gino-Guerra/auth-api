@@ -11,14 +11,12 @@ export async function isAuthenticated(req,res,next){
         return
     }
     //if so, go on:
-    jwt.verify(authoriztion, secretkey)
-    .then(decoded => {
+    jwt.verify(authoriztion, secretkey, (err, decoded) => {
+        if(err) {
+            res.status(401).send(err)
+            return
+        }
         req.local = decoded
         next()
     })
-.catch(err => {
-    res.status(401).send(err)
-})
-
-  
-}
+    }

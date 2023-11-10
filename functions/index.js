@@ -11,8 +11,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.post('/user', createUser)
-app.post('/user/login', login)
+app.post('/users', createUser)
+app.post('/users/login', login)
 app.get('/recipes', getAllRecipes)
 
 
