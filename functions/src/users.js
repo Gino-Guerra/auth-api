@@ -1,5 +1,5 @@
 import { db } from "./dbConnect.js";
-import { jwt } from "jsonwebtoken";
+import  jwt  from "jsonwebtoken";
 import { secretkey } from "./creds.js";
 
 const coll = db.collection('users');
