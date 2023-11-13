@@ -16,7 +16,7 @@ app.post('/users/login', login)
 app.get('/recipes', getAllRecipes)
 
 
-app.post('recipes',isAuthenticated, createRecipe)
+app.post('/recipes',isAuthenticated, createRecipe)
 // app.patch('/recipes/:recipeId', updateRecipe)
 
 export const api = onRequest(app)
